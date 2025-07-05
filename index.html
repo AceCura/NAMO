@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niver</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="btn-musica" onclick="alternarMusica()">Nossa música</button>
+  <audio id="MusicaFundo" src="./midia/LikeYouDo.mp3" loop></audio>
+
+  <div class="container">
+    <h1>♥️🌹</h1>
+
+    <div class="media-box-foto reverse">
+      <img src="./fotos/foto1.jpg" alt="Foto nossa" class="image" onclick="mostrarMensagem(this)">
+      <div class="text-box mensagem" data-texto="Olá bem, olha nos ai. Ultimamente eu não paro de pensar em você. 
+Talvez seja porque estou fazendo esse projeto pra você ou não hihi tem que pagar de difícil kkkkk. 
+Cara, acho incrível como fico todo fresco escrevendo pra você. Parece até que voltei pro 6/7 ano. 
+Mas enfim, não vou enrolar aqui, porque tem muita coisa pra baixo ainda. Bye ate o proximo texto b"></div>
+    </div>
+
+    <div class="media-box-video">
+      <video src="./videos/vd1.mp4" controls class="video"></video>
+      <button class="btn-msg" onclick="mostrarMensagemBotao(this)">Mostrar Mensagem</button>
+      <div class="text-box mensagem" data-texto="Esse momentos que brincamos ficam gravados na memória, e eu quero que você saiba que cada momento que passei com você é especial para mim."></div>
+    </div>
+
+    <div class="media-box-foto reverse">
+      <img src="./fotos/foto2.jpg" alt="Foto nossa" class="image" onclick="mostrarMensagem(this)">
+      <div class="text-box mensagem" data-texto="Conferindo se você tá cheirosa kkkk. Eu vejo essas fotos do 'nosso primeiro encontro' e acho engraçado como nada mudou... ainda sinto a mesma coisa, como se fosse sempre a primeira vez."></div>
+    </div>
+
+    <div class="media-box-video">
+      <video src="./videos/vd2.mp4" controls class="video"></video>
+      <button class="btn-msg" onclick="mostrarMensagemBotao(this)">Mostrar Mensagem</button>
+      <div class="text-box mensagem" data-texto="Falaram que quando você ama alguém de verdade, e quer ter certeza de que essa pessoa é ‘a certa’, tem que pensar se, no futuro, ela estaria lá por você.
+      Tipo se você precisasse, ela ficaria horas num hospital com você, cuidaria de você e essas coisas que pouca gente realmente faria, como dizem nos votos de casamento: na saúde e na doença, tlgd. 
+      E eu vejo isso em você. Sei que você estaria lá por mim, do mesmo jeito que eu estaria por você.
+Agora nesse vídeo eu to acabando com a minha saúde meu fígado foi pro caralho kkkkkkkkkkkkkkkkkkk."></div>
+    </div>
+
+        <div class="media-box-foto reverse">
+      <img src="./fotos/foto7.jpg" alt="Foto nossa" class="image" onclick="mostrarMensagem(this)">
+      <div class="text-box mensagem" data-texto="Eu nunca conheci ninguém que achasse que eu era bom o bastante até te conhecer.
+E você me faz acreditar também. Entt infelizmente eu preciso de você e você precisa de mim. Pode até falar que não
+mas precisa sim. Precisa de alguém que cuide de você. TADAMM TEM EU."></div>
+    </div>
+
+        <div class="media-box-video">
+      <video src="./videos/vd3.mp4" controls class="video"></video>
+      <button class="btn-msg" onclick="mostrarMensagemBotao(this)">Mostrar Mensagem</button>
+      <div class="text-box mensagem" data-texto="Quero dançar com você Dançar com você Quero dançar com você Dançar com você"></div>
+    </div>
+
+    <!-- GALERIA POLAROID -->
+    <div class="galeria-polaroid oculto" id="galeriaPolaroid">
+      <h2>Moments Top</h2>
+      <div class="varal">
+        <div class="polaroid" style="--rotate: -5deg">
+          <img src="./fotos/foto4.jpg" alt="Momento 1">
+          <p>T</p>
+        </div>
+        <div class="polaroid" style="--rotate: 4deg">
+          <img src="./fotos/foto5.jpg" alt="Momento 2">
+          <p>O</p>
+        </div>
+        <div class="polaroid" style="--rotate: -3deg">
+          <img src="./fotos/foto6.jpg" alt="Momento 3">
+          <p>P</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARTINHA TEMPORIZADA -->
+    <div class="cartinha-temporizadora">
+      <button onclick="mostrarCartinhas()">7 motivos que fizeram eu me apaixonar por you</button>
+      <div class="blocos-cartas" id="blocosCartas" style="display: none;">
+        <div class="bloco" onclick="mostrarMensagemAtrasada(this, 0)">1</div>
+        <div class="bloco" onclick="mostrarMensagemAtrasada(this, 1)">2</div>
+        <div class="bloco" onclick="mostrarMensagemAtrasada(this, 2)">3</div>
+        <div class="bloco" onclick="mostrarMensagemAtrasada(this, 3)">4</div>
+        <div class="bloco" onclick="mostrarMensagemAtrasada(this, 4)">5</div>
+        <div class="bloco" onclick="mostrarMensagemAtrasada(this, 5)">6</div>
+        <div class="bloco" onclick="mostrarMensagemAtrasada(this, 6)">7</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARTA FINAL COM MÚSICA -->
+  <div class="carta-container" onclick="abrirCarta()">
+    <div class="carta-inteira" id="cartaAnimada">
+      <div class="carta-frente">
+        Clique aqui para abrir a carta
+      </div>
+      <div class="carta-dentro">
+        <div class="contador-tempo" id="contadorTempo"></div>
+        <h2>Oii Emilly Atem</h2>
+        <p>
+          Bem,<br><br>
+          Eu já vi milhões de filmes de romance e a maioria mostra que o amor é o centro de tudo<br><br>
+          Que ele pode superar qualquer coisa ou curar qualquer dor dentro de nós.<br><br>
+          E sendo sincero sempre quis viver uma parada assim mas achava que isso só acontecia nos filmes.<br><br>
+          Mas tudo isso mudou quando conheci você, Emilly Atem<br><br>
+          Eu nunca imaginei que um dia eu sentiria essa sensação de estar totalmente consumido por outra pessoa até você chegar.<br><br>
+          Você me afastou da solidão que eu tanto sentia o vazio que habitava no meu peito (ficou muito baitola mas é verdade).<br><br>
+          Um dos motivos de eu estar fazendo programação era pra poder trabalhar de qualquer lugar e evitar ter que viajar pra longe de você. 
+          Aí, uns dias atrás, você me falou que só pensou em programar porque me viu programando… eu achei isso do caralho, porque eu também só comecei por sua causa. 
+          E, convenhamos, deve ser do caralho ganhar um site de presente, né? Depois você me diz se é mesmo kkkkk.<br><br>
+          
+
+          Você é minha direção
+          Vou te amar pra sempre ♥️🌹
+        </p>
+        <img src="./fotos/foto3.jpg" alt="Foto do casal" class="foto-pequena" />
+        <button onclick="pararMusicaCarta(event)">Tocar música</button>
+        <audio id="MusicaCarta" src="./midia/Vemca.mp3"></audio>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
